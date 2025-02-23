@@ -1,0 +1,50 @@
+.education {
+    text-align: left;
+    padding: 20px;
+}
+
+.education h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.education h3 {
+    margin: 20px;
+    font-size: 1.1rem;
+}
+
+.education-section {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.education-item {
+    padding: 10px 0;
+}
+
+.education-item h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.education-item p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.education-item span {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Lista de certificaciones compacta */
+.certifications-list {
+    list-style: none;
+    padding: 0;
+}
+
+.certifications-list li {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}

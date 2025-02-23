@@ -1,0 +1,113 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: inherit;
+    padding: 25px 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo del menú en desktop */
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Botón hamburguesa oculto en desktop */
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: inherit;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Espacio entre botones */
+}
+
+.flag-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.lang-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+/* Botón para cambiar de tema */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: inherit;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    /* Oculta el menú de navegación inicialmente */
+    .nav {
+        position: absolute;
+        top: 60px;
+        /* Ajusta según la altura del header */
+        left: 0;
+        width: 100%;
+        background-color: var(--menu-bg);
+        /* Color fijo según el tema */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    /* Cuando el menú está abierto */
+    .nav.open {
+        max-height: 300px;
+        /* Ajusta el valor máximo según la cantidad de items */
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+}
