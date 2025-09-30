@@ -1,7 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   font-family: 'Roboto Mono', monospace;
   text-align: center;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.5s ease, color 0.5s ease;
   margin: 0;
   padding: 0;
   position: relative;
@@ -25,7 +35,6 @@ button, .btn {
   text-align: center;
 }
 
-/* Efecto al pasar el mouse */
 button:hover, .btn:hover {
   background: var(--button-hover-bg);
   color: var(--button-hover-text);
@@ -34,26 +43,28 @@ button:hover, .btn:hover {
 
 /* Tema oscuro */
 .App.dark {
-  background-color: #001f3f;
+  background: linear-gradient(135deg, #0a1929 0%, #001a35 50%, #0d1b2a 100%);
   color: #ffffff;
-  --menu-bg: #001f3f;
+  --menu-bg: rgba(0, 31, 63, 0.95);
   --button-bg: transparent;
-  --button-border: #ffffff;
+  --button-border: #00d4ff;
   --button-text: #ffffff;
-  --button-hover-bg: #ffffff;
-  --button-hover-text: #001f3f;
+  --button-hover-bg: #00d4ff;
+  --button-hover-text: #001a35;
+  --accent-color: #00d4ff;
 }
 
 /* Tema claro */
 .App.light {
-  background-color: #f5f5f5;
-  color: #121212;
-  --menu-bg: #f5f5f5;
+  background: linear-gradient(135deg, #fafafa 0%, #e8eaf6 50%, #f5f5f5 100%);
+  color: #1a1a1a;
+  --menu-bg: rgba(255, 255, 255, 0.95);
   --button-bg: transparent;
-  --button-border: #121212;
-  --button-text: #121212;
-  --button-hover-bg: #121212;
+  --button-border: #0066cc;
+  --button-text: #1a1a1a;
+  --button-hover-bg: #0066cc;
   --button-hover-text: #ffffff;
+  --accent-color: #0066cc;
 }
 
 .App::before {
@@ -63,89 +74,87 @@ button:hover, .btn:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: 600% 600%;
-  animation: gradientAnimation 20s ease infinite;
+  background: inherit;
   z-index: -1;
-}
-
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  opacity: 0.95;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-section {
-  width: 90%;
-  max-width: 800px;
-  padding: 50px 0;
-  border-bottom: 1px solid #ccc;
-}
-
-section:last-child {
-  border-bottom: none;
-}
-
-.timeline {
   position: relative;
-  padding: 20px 0;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #ccc;
-  transform: translateX(-50%);
-}
-
-.timeline-item {
-  position: relative;
-  width: 50%;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.timeline-item:nth-child(odd) {
-  left: 0;
-  text-align: right;
-}
-
-.timeline-item:nth-child(even) {
-  left: 50%;
-  text-align: left;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  top: 20px;
-  right: -8px;
-  width: 16px;
-  height: 16px;
-  background: #fff;
-  border: 2px solid #ccc;
-  border-radius: 50%;
   z-index: 1;
 }
 
-.timeline-item:nth-child(even)::before {
-  left: -8px;
+section {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+section:last-child {
+  padding-bottom: 4rem;
 }
 
 .content {
   position: relative;
   z-index: 1;
-  /* Si deseas que el contenido tenga el degradado, puedes asignarlo aquí:
-     ackground: var(--gradient-colors); 
-     Pero recuerda que con ::before en .App ya se aplica a toda la página.
-  */
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--button-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--button-border);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--button-hover-bg);
+}
+
+/* Animaciones globales */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Selection color */
+::selection {
+  background: var(--button-border);
+  color: var(--button-hover-text);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .App {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    font-size: 13px;
+  }
 }

@@ -25,9 +25,10 @@ const Header = ({ toggleTheme }) => {
                     </span>
                     <nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
                         <ul>
-                            <li><a href="#home" onClick={() => setMobileMenuOpen(false)}>{t('home')}</a></li>
+                            <li><a href="#about" onClick={() => setMobileMenuOpen(false)}>{t('home')}</a></li>
                             <li><a href="#skills" onClick={() => setMobileMenuOpen(false)}>{t('skills')}</a></li>
                             <li><a href="#experience" onClick={() => setMobileMenuOpen(false)}>{t('experience')}</a></li>
+                            <li><a href="#projects" onClick={() => setMobileMenuOpen(false)}>{t('projects')}</a></li>
                             <li><a href="#education" onClick={() => setMobileMenuOpen(false)}>{t('education')}</a></li>
                             <li><a href="#contact" onClick={() => setMobileMenuOpen(false)}>{t('contact')}</a></li>
                         </ul>

@@ -1,56 +1,211 @@
 .experience {
-  text-align: left;
-}
-
-.experience-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-}
-
-.company-logo {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-right: 20px;
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .experience h2 {
   text-align: center;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.experience h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--button-border);
+  border-radius: 2px;
+}
+
+.experience-item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px solid var(--button-border);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+.experience-item:nth-child(even) {
+  transform: translateX(50px);
+  animation: slideInRight 0.6s ease forwards;
+}
+
+.experience-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.experience-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.experience-item:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+  border-color: var(--accent-color);
+  background: rgba(0, 212, 255, 0.03);
+}
+
+.company-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 15px;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.experience-item:hover .company-logo {
+  transform: scale(1.1);
+}
+
+.experience-details {
+  flex: 1;
+  text-align: left;
 }
 
 .experience-details h3 {
-  margin: 0;
-  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--button-text);
+  text-align: left;
 }
 
 .experience-details h4 {
-  margin: 5px 0;
-  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--button-text);
+  opacity: 0.9;
+  text-align: left;
 }
 
 .period {
+  display: inline-block;
   font-style: italic;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin-bottom: 1rem;
 }
 
 .experience-details ul {
-  margin: 10px 0;
-  padding-left: 20px;
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.experience-details ul li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  text-align: left;
+}
+
+.experience-details ul li::marker {
+  color: var(--accent-color);
+  font-size: 1.2rem;
 }
 
 .experience-skills {
   display: flex;
-  gap: 10px;
+  gap: 0.8rem;
   flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
 
 .skill-btn {
-  background: transparent;
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  border-radius: 5px;
+  background: var(--button-bg);
+  border: 2px solid var(--button-border);
+  color: var(--button-text);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
   cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.skill-btn:hover {
+  background: var(--accent-color);
+  color: #001a35;
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience h2 {
+    font-size: 2.5rem;
+  }
+
+  .experience-item {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .company-logo {
+    width: 80px;
+    height: 80px;
+    align-self: center;
+  }
+
+  .experience-details h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .experience-details h4 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .period {
+    display: block;
+    text-align: center;
+  }
+
+  .experience-skills {
+    justify-content: center;
+  }
 }

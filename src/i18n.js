@@ -38,6 +38,41 @@ i18n
           "cert_it_prep": "IT Professional Preparation",
           "cert_professional_dev": "Professional Profile Development",
 
+          //Projects
+          "client_projects": "Client Projects",
+          "personal_projects": "Personal Projects",
+          "projects_note": "Featured projects developed for clients under confidentiality agreements",
+          "personal_projects_note": "Open source and personal projects available for exploration",
+          "view_code": "View Code",
+          "view_demo": "View Demo",
+          "view_api": "View API",
+
+          "project_title_1": "AI-LMS Platform",
+          "project_title_2": "Forms Core Backend",
+          "project_title_3": "AI Chat Library",
+          "project_title_4": "Donation & Social Network Platform",
+          "project_title_5": "AI Content Creation Platform",
+          "project_title_6": "Personnel Management System",
+
+          "project_category_mobile": "Mobile & Web Development",
+          "project_category_ai": "AI & Cloud Solutions",
+          "project_category_edutech": "AI & EdTech Solutions",
+          "project_category_backend": "Backend Solutions",
+          "project_category_enterprise": "Enterprise Solutions",
+          "project_category_agritech": "AgriTech Solutions",
+
+          "project_ailms_desc": "AI-powered educational content generation platform with RAG capabilities. Creates comprehensive course materials, quizzes, and assignments using OpenAI and vector search with Pinecone. Includes multi-format export to Canvas, Moodle, and other LMS platforms.",
+          "project_forms_desc": "Core backend library for forms management with AI chat capabilities. Provides authentication engines, multi-provider support, and comprehensive API for form-based applications. Built with Flask and PostgreSQL for scalable enterprise solutions.",
+          "project_sentellent_core_desc": "Core application infrastructure for AI-powered content generation and processing. Implements advanced AI/ML algorithms for intelligent automation and cloud-based workflows.",
+          "project_easy_donate_desc": "Donation platform that also functions as a social network, enabling automated content creation and community engagement.",
+          "project_sentellent_desc": "Platform for automated social media content creation using LLM technology and advanced AI algorithms.",
+          "project_perseo_desc": "Personnel Management Platform for Marine Infantry that enables real-time information access on task assignments and deployments.",
+
+          "personal_project_title_1": "LecheFácil - Frontend",
+          "personal_project_title_2": "LecheFácil - Backend",
+          "personal_project_lechefacil_frontend_desc": "Comprehensive dairy farm management web and mobile application for tracking milk production, animal health, and business operations. Built with offline capabilities using Capacitor.",
+          "personal_project_lechefacil_backend_desc": "Multi-tenant REST API backend for dairy farm management system. Provides authentication, data persistence, and business logic for managing farms, animals, production records, and analytics.",
+
           //Experience
           "company_ioet": "IOET, Nevada (United States)",
           "role_ioet": "Full-Stack Developer",
@@ -107,6 +142,41 @@ i18n
           "cert_soft_skills": "Capacitación en Habilidades Blandas",
           "cert_it_prep": "Preparación en IT",
           "cert_professional_dev": "Desarrollo y Gestión del Perfil Profesional",
+
+          //Projects
+          "client_projects": "Proyectos de Clientes",
+          "personal_projects": "Proyectos Personales",
+          "projects_note": "Proyectos destacados desarrollados para clientes bajo acuerdos de confidencialidad",
+          "personal_projects_note": "Proyectos personales y de código abierto disponibles para exploración",
+          "view_code": "Ver Código",
+          "view_demo": "Ver Demo",
+          "view_api": "Ver API",
+
+          "project_title_1": "Plataforma AI-LMS",
+          "project_title_2": "Forms Core Backend",
+          "project_title_3": "Librería de Chat con IA",
+          "project_title_4": "Plataforma de Donación y Red Social",
+          "project_title_5": "Plataforma de Creación de Contenido con IA",
+          "project_title_6": "Sistema de Gestión de Personal",
+
+          "project_category_mobile": "Desarrollo Móvil y Web",
+          "project_category_ai": "Soluciones de IA y Cloud",
+          "project_category_edutech": "Soluciones de IA y EdTech",
+          "project_category_backend": "Soluciones Backend",
+          "project_category_enterprise": "Soluciones Empresariales",
+          "project_category_agritech": "Soluciones AgriTech",
+
+          "project_ailms_desc": "Plataforma de generación de contenido educativo con capacidades RAG. Crea materiales de cursos completos, quizzes y tareas usando OpenAI y búsqueda vectorial con Pinecone. Incluye exportación multi-formato a Canvas, Moodle y otras plataformas LMS.",
+          "project_forms_desc": "Librería backend core para gestión de formularios con capacidades de chat IA. Proporciona motores de autenticación, soporte multi-proveedor y API completa para aplicaciones basadas en formularios. Construido con Flask y PostgreSQL para soluciones empresariales escalables.",
+          "project_sentellent_core_desc": "Infraestructura de aplicación core para generación y procesamiento de contenido con IA. Implementa algoritmos avanzados de IA/ML para automatización inteligente y flujos de trabajo basados en la nube.",
+          "project_easy_donate_desc": "Plataforma de donación que también funciona como red social, permitiendo la creación automatizada de contenido y participación comunitaria.",
+          "project_sentellent_desc": "Plataforma para creación automática de contenido en redes sociales usando tecnología LLM y algoritmos avanzados de IA.",
+          "project_perseo_desc": "Plataforma de Gestión de Personal para Infantería de Marina que permite acceso en tiempo real a asignaciones de tareas y despliegues.",
+
+          "personal_project_title_1": "LecheFácil - Frontend",
+          "personal_project_title_2": "LecheFácil - Backend",
+          "personal_project_lechefacil_frontend_desc": "Aplicación web y móvil integral para gestión de fincas lecheras. Rastrea producción de leche, salud animal y operaciones comerciales. Construida con capacidades offline usando Capacitor.",
+          "personal_project_lechefacil_backend_desc": "API REST multi-tenant backend para sistema de gestión de fincas lecheras. Proporciona autenticación, persistencia de datos y lógica de negocio para gestionar fincas, animales, registros de producción y análisis.",
 
           //Experience
           "company_ioet": "IOET, Nevada (Estados Unidos)",
